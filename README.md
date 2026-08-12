@@ -8,13 +8,11 @@ redesigned SwayNC, and a combi-mode Rofi launcher.
 
 ## 📸 Preview
 
-![screenshot](screenshots/1.png)
+![screenshot](screenshots/1.webp)
 
-![screenshot](screenshots/2.png)
+![screenshot](screenshots/2.webp)
 
-![screenshot](screenshots/3.png)
-
-https://github.com/user-attachments/assets/410327b6-3322-4e4e-9355-50f449f396f9
+https://github.com/user-attachments/assets/3dff2526-f1d6-498d-b956-92a99cb71bfe
 
 ---
 
