@@ -1,0 +1,134 @@
+/* ══════════════════════════════════════════════
+   Waybar Style — dynamic (pywal-driven) palette
+   ══════════════════════════════════════════════ */
+
+@import url("file:///home/qh0f/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: @co1;
+    border-radius: 12px;
+    border: 1px solid @co9;
+    color: @co6;
+    transition: background 0.3s ease;
+}
+
+/* ── Workspaces ──────────────────────────── */
+
+#workspaces {
+    background: transparent;
+    padding: 0 6px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: @co8;
+    padding: 2px 10px;
+    border-radius: 8px;
+    margin: 4px 2px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+#workspaces button:hover {
+    background: @co3;
+    color: @co6;
+    border-color: @co6;
+}
+
+#workspaces button.active {
+    background: @co3;
+    color: @co6;
+    border-color: @co6;
+    font-weight: 600;
+}
+
+#workspaces button.urgent {
+    background: @co5;
+    color: @co1;
+    border-color: @co5;
+}
+
+/* ── Window title ─────────────────────────── */
+
+#window {
+    color: @co7;
+    padding: 0 12px;
+    font-size: 12px;
+}
+
+/* ── Clock ───────────────────────────────── */
+
+#clock {
+    color: @co6;
+    font-weight: 600;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+/* ── Stats group — connected segment ─────── */
+
+#cpu, #memory, #network, #pulseaudio, #battery {
+    background: @co2;
+    color: @co6;
+    padding: 4px 14px;
+    margin: 4px 0;
+    transition: background-color 0.2s ease;
+}
+
+#cpu { border-radius: 8px 0 0 8px; margin-left: 2px; }
+#battery { border-radius: 0 8px 8px 0; margin-right: 2px; }
+
+#memory, #network, #pulseaudio, #battery {
+    border-left: 1px solid @co9;
+}
+
+#cpu:hover, #memory:hover, #network:hover, #pulseaudio:hover, #battery:hover {
+    background: @co3;
+}
+
+#cpu { color: @co7; }
+#cpu.warning { color: @co10; }
+#cpu.critical { color: @co5; }
+
+#memory { color: @co7; }
+
+#battery.charging { color: @co7; }
+#battery.warning:not(.charging) { color: @co10; }
+#battery.critical:not(.charging) {
+    color: @co5;
+    animation: blink 1s linear infinite;
+}
+@keyframes blink { to { opacity: 0.4; } }
+
+#network { color: @co6; }
+#network.disconnected { color: @co8; }
+
+#pulseaudio { color: @co7; }
+#pulseaudio.muted { color: @co8; }
+
+/* ── Tray ────────────────────────────────── */
+
+#tray {
+    background: @co2;
+    border-radius: 8px;
+    padding: 2px 10px;
+    margin: 4px 2px;
+}
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @co5;
+}
+
+/* ══════════════════════════════════════════════ */
