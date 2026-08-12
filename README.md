@@ -8,11 +8,17 @@ redesigned SwayNC, and a combi-mode Rofi launcher.
 
 ## 📸 Preview
 
-![screenshot](screenshots/1.png)
+![Screenshot](screenshots/1.png)
 
-![screenshot](screenshots/2.png)
+![Screenshot](screenshots/2.png)
+
+![demo](screenshots/demo.gif)
 
 [🎬 Demo video](screenshots/Demo.mp4)
+
+> Full-quality video is in `screenshots/Demo.mp4`, but GitHub won't
+> preview it inline due to file size — download it directly if you
+> want to see it in better quality.
 
 ---
 
@@ -40,6 +46,7 @@ redesigned SwayNC, and a combi-mode Rofi launcher.
 dotfiles/
 ├── hypr/
 │   ├── hyprland.lua        # main config: binds, animations, rules
+│   ├── set-wallpaper.sh
 │   └── hyprpaper.conf      # wallpaper daemon config
 ├── waybar/
 │   ├── config.jsonc        # modules, layout, workspace range
