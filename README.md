@@ -195,4 +195,4 @@ Main modifier is `SUPER`.
 
 ## 🤖 Credits
 
-Vive coded with clode
+Vibe coded with claude
